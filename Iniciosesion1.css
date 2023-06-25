@@ -1,0 +1,82 @@
+body {
+    background-image: url("PNG/Fondo.jpg");
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+h1 {
+    padding: 50px;
+    background-color: black;
+}
+
+form {
+    background-color: #222;
+    border: 1px white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 150px auto;
+    padding: 20px;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+label {
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    position: fixed;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    left: 650px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type=submit]:hover {
+    text-align: center;
+    background-color: black;
+}
+
+.olvido {
+    text-align: center;
+    margin-top: 10px; /* Ajusta el valor según sea necesario */
+  }
+  
+  
+
+.olvido-link {
+    color: white;
+    margin-left: 10px;
+}
+
+.link-derecha {
+    color: white;
+    margin-left: auto;
+    display: inline-block;
+}
