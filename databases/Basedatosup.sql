@@ -1,5 +1,6 @@
+drop database BaseDatosUpDenim;
 create database BaseDatosUpDenim;
-use BaseDatosUpDenim
+use BaseDatosUpDenim;
 
 CREATE TABLE Personas(idDocumento INT NOT NULL,
 nombresPer varchar(30) NOT NULL,
@@ -124,7 +125,7 @@ idPqr int not null,
 primary key (idEstadoPqr),
 foreign key (idPqr) references Pqrs(idPqr));
 
-use BaseDatosUpDenim
+use BaseDatosUpDenim;
 
 create table Cotizaciones(idCotizacion int not null auto_increment,
 fechaCotizacion date not null, 
