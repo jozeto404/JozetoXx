@@ -10,26 +10,17 @@ require 'database.php';
 
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $records = $conn->prepare('SELECT id, email, password FROM Usuarios WHERE email = :email');
-    echo "1";
     $records->bindParam(':email', $_POST['email']);
-    echo "2";
     $records->execute();
-    echo "3";
     $results = $records->fetch(PDO::FETCH_ASSOC);
-    echo "4";
     $message = '';
-    echo strlen($results);
 
-    if (strlen($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-        echo "5.1";
+    if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
         $_SESSION['user_id'] = $results['id'];
-        echo "5.2";
         header("Location: /JozetoXx");
     } else {
-        echo "5.3";
         $message = 'Perdon, esas credenciales no existen';
     }
-    echo "6";
 }
 ?>
 <html>
@@ -53,12 +44,16 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     </form>
     <div class="olvido">
  
-    <a href="Olvido su contraseña.html" class="olvido-link">¿ Olvidaste tu contrase&ntilde;a ?</a>
+    <a href="Olvido_su_contraseña.php" class="olvido-link">¿ Olvidaste tu contrase&ntilde;a ?</a>
     
 
 
     <a href="registro.php" class="link-derecha">Registrar usuario</a>
     </div>
+    <div class="boton">
+            <a href="index.php">
+            <button>Volver Atras</button>
+        </a>
 </body>
 
 </html>

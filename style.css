@@ -31,8 +31,8 @@ nav {
     padding: 25px;
 
 
-    display: inline;
-    flex-direction: row;
+    display: contents;
+    flex-direction: column;
     background-color: black;
     font-size: 20px;
     vertical-align: super;

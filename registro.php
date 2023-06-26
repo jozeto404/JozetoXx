@@ -3,40 +3,22 @@
 require 'database.php';
 
 $message = '';
-echo "1";
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
-	echo "2";
 	$sql = "INSERT INTO Usuarios (email, password) VALUES (:email, :password)";
-	echo "3";
 	$stmt = $conn->prepare($sql);
-	echo "4";
 	$stmt->bindParam(':email', $_POST['email']);
-	echo "5";
 	$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-	echo "6";
 	$stmt->bindParam(':password', $password);
-	echo "7";
 	try {
-		// Código que puede generar una excepción
-		// ...
-		// Lanzar una excepción manualmente
-		$stmt->execute();
-		// ...
+		if ($stmt->execute()) {
+			$message = 'Successfully created new user';
+		} else {
+			$message = 'Sorry there must have been an issue creating your account';
+		}
 	} catch (Exception $e) {
 		// Capturar y manejar la excepción
 		echo "Se ha producido una excepción: " . $e->getMessage();
 	}
-	
-	
-	echo "7.1";
-	if ($stmt->execute()) {
-		echo "8";
-		$message = 'Successfully created new user';
-	} else {
-		echo "9";
-		$message = 'Sorry there must have been an issue creating your account';
-	}
-	echo "10";
 }
 ?>
 <!DOCTYPE html>
