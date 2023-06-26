@@ -22,6 +22,9 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
 <head>
     <link rel="stylesheet" href="Iniciosesion1.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="olvido.css">
+
 </head>
 
 <body>
@@ -40,10 +43,10 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     <div class="olvido">
     </div>
 
-    <div class="boton">
-        <a href="index.php">
-        <button>Volver Atras</button>
-    </a>
+    </div>
+    <div> <div class="botones"> <a href="index.php"> 
+    <button>Volver Atras</button> </a> 
+</div> </div>
 </body>
 
 </html>

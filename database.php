@@ -5,6 +5,9 @@ $username = 'root';
 $password = '';
 $database = 'SIUD';
 
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
 try {
     $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
 } catch (PDOException $e){

@@ -1,0 +1,9 @@
+botones {
+    padding: 25px 45px;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}

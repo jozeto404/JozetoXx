@@ -66,9 +66,8 @@ input[type=submit]:hover {
 .olvido {
     text-align: center;
     margin-top: 10px; /* Ajusta el valor según sea necesario */
-  }
-  
-  
+}
+
 
 .olvido-link {
     color: white;
@@ -79,4 +78,13 @@ input[type=submit]:hover {
     color: white;
     margin-left: auto;
     display: inline-block;
+}
+button {
+    padding: 25px 45px;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-size: 20px;
 }
